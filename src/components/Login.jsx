@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
 
-// import { client } from '../client';
+import { writeClient } from "../client";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,9 +20,9 @@ const Login = () => {
       userName: name,
       image: imageUrl,
     };
-    // client.createIfNotExists(doc).then(() => {
-    //   navigate("/", { replace: true });
-    // });
+    writeClient.createIfNotExists(doc).then(() => {
+      navigate("/", { replace: true });
+    });
   };
 
   return (
@@ -40,7 +40,7 @@ const Login = () => {
 
         <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0    bg-blackOverlay">
           <div className="p-5">
-            <img src={logo} width="130px" />
+            <img src={logo} width="130px" alt="" />
           </div>
 
           <div className="shadow-2xl">

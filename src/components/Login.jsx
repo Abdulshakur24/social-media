@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -9,6 +9,11 @@ import { writeClient } from "../client";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const userExist = localStorage.getItem("user");
+    if (userExist) navigate("/");
+  }, [navigate]);
 
   const responseGoogle = (response) => {
     console.log(response);

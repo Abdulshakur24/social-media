@@ -1,6 +1,6 @@
 # Hello :wave:, welcome here!
 
-A full stack social media site, where you can login in with google authentication, and create your own feeds/pins!
+A full-stack social media site, where you can log in with google authentication and create your own feeds/pins!
 
 ## Tech used:
 
